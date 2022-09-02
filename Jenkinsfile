@@ -4,12 +4,12 @@ pipeline {
         nodejs '18.8.0'
     }
     stages {
-        stage('Build') {
+        stage('Install Dependencies') {
             steps {
                 sh 'yarn install'
             }
         }
-        stage('Test') {
+        stage('Run Tests') {
             steps {
                 sh 'yarn test'
             }
