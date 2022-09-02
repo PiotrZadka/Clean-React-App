@@ -1,10 +1,11 @@
 pipeline {
     agent any
-
+    tools {
+        nodejs '18.8.0'
+    }
     stages {
         stage('Build') {
             steps {
-                sh 'ls'
                 sh 'yarn install'
             }
         }
