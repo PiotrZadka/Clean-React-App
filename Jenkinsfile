@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
+                sh 'ls'
                 sh 'yarn test'
             }
         }
